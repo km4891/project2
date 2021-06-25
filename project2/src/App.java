@@ -13,8 +13,19 @@ public class App {
         // System.out.println(minChar("ukhfgkfjhgfdjhafhjdghfkh", 0));
 
         // int days = input.nextInt();
-         int day = input.nextInt();
-        System.out.println("You would earn $" + payDay(day) / penToDol + "for working " + day + " days");
+        //  int day = input.nextInt();
+        // System.out.println("You would earn $" + payDay(day) / penToDol + "for working " + day + " days");
+        int menu = input.nextInt();
+            switch (menu) {
+                case 1:
+                    System.out.println("Inout 2 numbers, with 2nd being larger");
+                    int begin = input.nextInt();
+                    int end = input.nextInt();
+                    System.out.println(sumInts(begin, end));
+            }
+      
+
+
     }
 
     public static int sumInts(int begin, int end){
