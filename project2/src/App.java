@@ -15,6 +15,13 @@ public class App {
         // int days = input.nextInt();
         //  int day = input.nextInt();
         // System.out.println("You would earn $" + payDay(day) / penToDol + "for working " + day + " days");
+
+        System.out.println("Choose one of the following options");
+        System.out.println("Press 1. For a recurisve Java method to add 2 integers from start through end");
+        System.out.println("Press 2. To find the smalles letter in a word");
+        System.out.println("Press 3. Watch your money double everyday you work");
+        
+
         int menu = input.nextInt();
             switch (menu) {
                 case 1:
@@ -29,9 +36,12 @@ public class App {
                     String x = input.next();
                     int z = 0;
                     System.out.println("The smallest letter is: " + minChar(x, z));
-
+                    break;
+                
                 case 3: 
-                    
+                    System.out.println("How many days would you like to work? ");
+                    int day = input.nextInt();
+                    System.out.println("You would earn $" + payDay(day) / penToDol + "for working " + day + " days");
             }
       
 
