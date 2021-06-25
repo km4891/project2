@@ -2,7 +2,7 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
+        int penToDol = 100;
         Scanner input = new Scanner(System.in);
         // System.out.println("Inout 2 numbers, with 2nd being larger");
 
@@ -10,7 +10,11 @@ public class App {
         // int end = input.nextInt();
 
         // System.out.println(sumInts(begin, end));
-        System.out.println(minChar("ukhfgkfjhgfdjhafhjdghfkh", 0));
+        // System.out.println(minChar("ukhfgkfjhgfdjhafhjdghfkh", 0));
+
+        // int days = input.nextInt();
+         int day = input.nextInt();
+        System.out.println("You would earn $" + payDay(day) / penToDol + "for working " + day + " days");
     }
 
     public static int sumInts(int begin, int end){
@@ -31,5 +35,15 @@ public class App {
             if (candidate < c) c = candidate; // add update
         }
         return c;
+    }
+
+    public static double payDay(int day) {
+        // double penToDol = 100;
+        if (day == 1) {
+            return 1;
+        }
+
+        return Math.pow(2, day - 1) + payDay(day - 1);
+        
     }
 }
