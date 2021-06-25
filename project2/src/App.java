@@ -18,10 +18,20 @@ public class App {
         int menu = input.nextInt();
             switch (menu) {
                 case 1:
-                    System.out.println("Inout 2 numbers, with 2nd being larger");
+                    System.out.print("Inout 2 numbers, with 2nd being larger");
                     int begin = input.nextInt();
                     int end = input.nextInt();
                     System.out.println(sumInts(begin, end));
+                    break;
+                
+                case 2:
+                    System.out.print("Enter a word to find the smallest letter: ");
+                    String x = input.next();
+                    int z = 0;
+                    System.out.println("The smallest letter is: " + minChar(x, z));
+
+                case 3: 
+                    
             }
       
 
