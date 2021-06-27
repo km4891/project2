@@ -2,8 +2,9 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int penToDol = 100;
+        double dolToPen = 0.01;
         Scanner input = new Scanner(System.in);
+        boolean quit = false;
         // System.out.println("Inout 2 numbers, with 2nd being larger");
 
         // int begin = input.nextInt();
@@ -15,13 +16,14 @@ public class App {
         // int days = input.nextInt();
         //  int day = input.nextInt();
         // System.out.println("You would earn $" + payDay(day) / penToDol + "for working " + day + " days");
-
+        while (quit == false) {
         System.out.println("Choose one of the following options");
         System.out.println("Press 1. For a recurisve Java method to add 2 integers from start through end");
         System.out.println("Press 2. To find the smalles letter in a word");
         System.out.println("Press 3. Watch your money double everyday you work");
+        System.out.println("Press 0. To exit");
         
-
+        
         int menu = input.nextInt();
             switch (menu) {
                 case 1:
@@ -41,9 +43,18 @@ public class App {
                 case 3: 
                     System.out.println("How many days would you like to work? ");
                     int day = input.nextInt();
-                    System.out.println("You would earn $" + payDay(day) / penToDol + "for working " + day + " days");
+                    // double total = Math.round(payDay(day) / penToDol);
+                    System.out.println("You would earn $" + payDay(day) * dolToPen + " for working " + day + " days");
+                    break;
+                
+                case 0:
+                    quit = true;
+                    break;
+                
+                default:
+                    System.out.println("Please enter a valid selection");
             }
-      
+        }
 
 
     }
